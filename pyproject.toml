@@ -1,0 +1,17 @@
+[project]
+name = "cifar10-dnn-classify"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "deepattic", email = "148025215+deepattic@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+cifar10-dnn-classify = "cifar10_dnn_classify:main"
+
+[build-system]
+requires = ["uv_build>=0.12.24,<0.13.0"]
+build-backend = "uv_build"
