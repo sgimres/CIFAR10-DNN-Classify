@@ -7,7 +7,12 @@ authors = [
     { name = "deepattic", email = "148025215+deepattic@users.noreply.github.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "datasets>=5.1.0",
+    "matplotlib>=3.11.2",
+    "torch>=2.14.1",
+    "torchvision>=0.29.1",
+]
 
 [project.scripts]
 cifar10-dnn-classify = "cifar10_dnn_classify:main"
@@ -15,3 +20,14 @@ cifar10-dnn-classify = "cifar10_dnn_classify:main"
 [build-system]
 requires = ["uv_build>=0.12.24,<0.13.0"]
 build-backend = "uv_build"
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cpu"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.40.2",
+    "ipykernel>=7.4.0",
+    "ipywidgets>=8.1.9",
+    "ruff>=0.17.1",
+]
